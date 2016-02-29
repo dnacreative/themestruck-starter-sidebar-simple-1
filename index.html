@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Vertical Sidebar Navigation Menu in Bootstrap by Themestruck.com</title>
+	
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Sidebar style-->
+	<link rel="stylesheet" href="css/sidebar-style.css">
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	 <div id="main-wrapper">
+	 	
+	 	<!-- Sidebar Nav -->
+	 	<header id="sidebar-nav">
+	 		<div class="main-nav">
+				<div class="brand">
+					<a href="#"><img src="img/logo.jpg" class="img-responsive" alt=""></a>
+				</div>
+				<nav class="nav-items">
+					<ul>
+						<li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+					</ul>
+				</nav>
+	 		</div>
+	 	</header>
+	 	<!-- /#sidebar nav -->
+	 	
+	 	<!-- Content -->
+	 	<div id="main-content">
+	 		<div class="container-fluid">
+	 			<div class="row">
+	 				<div class="col-md-6">
+	 					<div class="well">
+	 						<h1>Vertical Sidebar Navigation Starter Bootstrap Template</h1>
+							<p>This Starter template has responsive sidebar menu. On smaller screen the menu will be hidden and a toggle button will always remain fixed at the bottom right corver of the screen for easy toggle.</p>
+							<p>Add <code>.menu-toggle</code> to turn any link into a toglle switch</p>	 					
+	 						<a href="#" class="btn btn-default menu-toggle">Toggle Menu &nbsp; <i class="fa fa-bars"></i></a>
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	<!-- /#content -->
+	 	
+	 </div>
+	 
+	 <a href="#" class="btn btn-default btn-toggle-fixed menu-toggle"><i class="fa fa-bars"></i></a>
+
+	 <script src="js/jquery.min.js"></script>
+	 <script src="js/bootstrap.min.js"></script>
+	
+	 <!-- Menu Toggle Script -->
+     <script>
+		$(".menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#main-wrapper").toggleClass("sidebar-toggle");
+		});
+     </script>
+    
+</body>
+
+</html>

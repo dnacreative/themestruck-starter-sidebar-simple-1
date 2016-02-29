@@ -1,0 +1,117 @@
+@import 'less/vars';
+
+/*!
+ * Theme Struck - Simple vertical sidebar navigation template (http://themestruck.com)
+ * Code licensed under the MIT
+ * For details, see #
+ */
+
+
+body{
+	overflow-x: hidden;
+}
+
+#main-wrapper{
+	position: absoluteb;
+	width: 100%;
+	margin-left: 250px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-nav{
+	z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+	box-sizing: border-box;
+    background: @background;
+	box-shadow: -2px 0 3px 0px #f0f0f0 inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.main-nav{
+	padding: 15px;
+	width: 250px;
+	.brand{
+		
+	}
+	.nav-items{
+		margin-top: 30px;
+		ul{
+			text-transform: uppercase;
+			font-family: @secondary-font;
+			padding: 0;
+			li{
+			 	list-style: none;
+				margin-bottom: 4px;
+				border-bottom: 1px solid #f0f0f0;
+				i{
+					margin-right: 10px;
+				}
+				a{
+					color: @color3;
+					display: block;
+					padding: 10px;
+				}
+				&.active{
+					background: @color1;
+					border-radius: 4px;
+					border-bottom: none;
+					a{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+#main-content{
+	padding-top: 15px;
+}
+
+#main-wrapper{
+	margin-left: 0;
+	#sidebar-nav{
+		width: 0;
+	}
+}
+#main-wrapper.sidebar-toggle{
+	margin-left: 250px;
+	#sidebar-nav{
+		width: 250px;
+	}
+}
+
+@media @desktop{
+	#main-wrapper{
+		margin-left: 250px;
+		#sidebar-nav{
+			width: 250px;
+		}
+	}
+	#main-wrapper.sidebar-toggle{
+		margin-left: 0;
+		#sidebar-nav{
+			width: 0;
+		}
+	}
+}
+
+.btn-toggle-fixed{
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	@media @desktop{
+		display: none;
+	}
+}

@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,100italic,300italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700,400,300);
+/*!
+ * Theme Struck - Simple vertical sidebar navigation template (http://themestruck.com)
+ * Code licensed under the MIT
+ * For details, see #
+ */
+body {
+  overflow-x: hidden;
+}
+#main-wrapper {
+  position: absoluteb;
+  width: 100%;
+  margin-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#sidebar-nav {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #fcfbf7;
+  box-shadow: -2px 0 3px 0px #f0f0f0 inset;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-nav {
+  padding: 15px;
+  width: 250px;
+}
+.main-nav .nav-items {
+  margin-top: 30px;
+}
+.main-nav .nav-items ul {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+}
+.main-nav .nav-items ul li {
+  list-style: none;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.main-nav .nav-items ul li i {
+  margin-right: 10px;
+}
+.main-nav .nav-items ul li a {
+  color: #4f5362;
+  display: block;
+  padding: 10px;
+}
+.main-nav .nav-items ul li.active {
+  background: #06abbf;
+  border-radius: 4px;
+  border-bottom: none;
+}
+.main-nav .nav-items ul li.active a {
+  color: #fff;
+}
+#main-content {
+  padding-top: 15px;
+}
+#main-wrapper {
+  margin-left: 0;
+}
+#main-wrapper #sidebar-nav {
+  width: 0;
+}
+#main-wrapper.sidebar-toggle {
+  margin-left: 250px;
+}
+#main-wrapper.sidebar-toggle #sidebar-nav {
+  width: 250px;
+}
+@media only screen and (min-width: 992px) {
+  #main-wrapper {
+    margin-left: 250px;
+  }
+  #main-wrapper #sidebar-nav {
+    width: 250px;
+  }
+  #main-wrapper.sidebar-toggle {
+    margin-left: 0;
+  }
+  #main-wrapper.sidebar-toggle #sidebar-nav {
+    width: 0;
+  }
+}
+.btn-toggle-fixed {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .btn-toggle-fixed {
+    display: none;
+  }
+}
